@@ -25,6 +25,7 @@ def sum_badge_priorities():
                 current_matches = set(line_priorities)
             else:
                 current_matches = set(line_priorities).intersection(current_matches)
+            # add badge priority to running total if i is about to reset to 0
             if i == 2:
                 total_badge_priorities += sum(current_matches)
             i = (i + 1) % 3
